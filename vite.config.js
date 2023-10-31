@@ -4,12 +4,10 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'graminha-do-bem',
+  base: 'graminha-do-bem/',
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      input: 'src/main.jsx' // Caminho correto para o arquivo de entrada
-    }
+    ssr: false,
   }
 });
 
